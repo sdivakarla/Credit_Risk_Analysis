@@ -12,3 +12,8 @@ Credit card dataset from LendingClub, a peer-to-peer lending services company wi
   - machine learning with EasyEnsembleClassifier
   
   
+# Results
+
+1. Native Random Oversampling - oversampling the data by sampling the minority class instances and adding to the training set until the majority and minority classes are balanced. 
+![NativeRandomOversampling](https://user-images.githubusercontent.com/98054953/175446611-e11fcdb0-4b73-4bda-ba07-73e7772ca5bb.png)
+
