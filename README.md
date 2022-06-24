@@ -38,7 +38,7 @@ Credit card dataset from LendingClub, a peer-to-peer lending services company wi
  - Accuracy rate was 52.9%
  - High risk precision was 1% and Low Risk precision was 100%
  - Recall(sensitivity) was 70% for high risk and 87% for low risk
- - F1 scores were 6% for high risk and 93% for low risk
+ - F1 scores were 6% for high risk and 73% for low risk
 
 5. BalancedRandomForestClassifier - machine learning with 100 iterations of Random Forest models. 
 ![BalancedForest](https://user-images.githubusercontent.com/98054953/175547883-f0d13402-54bb-4d01-a373-e525cf5555c5.png)
@@ -56,4 +56,9 @@ Credit card dataset from LendingClub, a peer-to-peer lending services company wi
 
 # Analysis
 
+Running multiple models allows for comparision of "fit" of the models to the dataset and the ability of the models to explain the variability.  The models are more robust predictive tools if the models are able to fit the variability and then may be used on new data as it is collected, assuming the distribution and variability are similar to the original dataset. 
+
+Due to the disparity in the sample numbers in the two categories, different analysis techniques were used to evaluate the data.  The first four models (which utilized oversampling, undersampling and a combination technique) all had accuracy levels of less than 65%, poorly fit the high risk data and sensitivity values that maxed out at 87% with the SMOTEEN model. 
+
+The machine learning models used ensemble classifers trained on balanced bootstrap samples.  The ensemble based models fit the high risk data better and had higher sensitivity and F1 scores, indicating that the false positive rates were lower and models better explained the variability in the data.  The Easy Ensemble Classifer outperformed the Balanced Random Forest Classifer and is the model that should continue to be refined as more data is collected and evaluated. 
 
